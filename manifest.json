@@ -1,0 +1,19 @@
+﻿{ "name": "挪抬 性"
+, "description": "Put a space in front of each \"性\" character."
+, "version": "1.0"
+, "permissions": ["storage", "tabs"]
+, "icons": { "128": "active.png" }
+, "content_scripts":
+  [ { "matches": ["<all_urls>"]
+    , "js": ["content.js"]
+    , "run_at": "document_end"
+    , "all_frames": true
+    }
+  ]
+, "background": { "scripts": ["background.js"] }
+, "browser_action":
+  { "default_icon": "active.png"
+  , "default_title": "Spaced Sex"
+  }
+, "manifest_version": 2
+}
