@@ -1,5 +1,5 @@
-let addSpace = () => {
-  let walker = document.createTreeWalker(document.body, 4)
+let addSpace = (root) => {
+  let walker = document.createTreeWalker(root, 4)
   while( walker.nextNode() ){
     let textNode = walker.currentNode
     let segs = textNode.nodeValue.split('性')
@@ -39,7 +39,7 @@ let observer = new MutationObserver((mutations) => {
 
 chrome.runtime.onMessage.addListener((req, sender, res) => {
   if( req ){
-    addSpace()
+    addSpace(document.body)
     observer.observe(document.body, {childList:true, subtree:true});
   }
   else{
