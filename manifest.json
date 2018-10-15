@@ -1,6 +1,6 @@
 ﻿{ "name": "挪抬 性"
 , "description": "Put a space in front of each \"性\" character."
-, "version": "1.0"
+, "version": "1.1"
 , "permissions": ["storage", "tabs"]
 , "icons": { "128": "active.png" }
 , "content_scripts":
